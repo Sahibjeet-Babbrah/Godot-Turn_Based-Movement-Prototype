@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Player_Script.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Retina/Unit/medievalUnit_01.png" type="Texture" id=2]
+
+[node name="Player" type="Node2D"]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 1 )
+speed = 600
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+polygon = PoolVector2Array( -8.27336, -23.8837, 8.32437, -23.9386, 8.12308, -11.8609, 16.2664, -11.8609, 16.1017, 16.0643, 12.0758, 16.1009, 12.0941, 24.2991, -12.0797, 24.3723, -12.1346, 16.1192, -15.9226, 16.1009, -15.9958, -12.3001, -8.21846, -12.2818 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 2 )
+
